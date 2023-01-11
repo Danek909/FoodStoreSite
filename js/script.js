@@ -31,7 +31,8 @@ $(document).ready(function () {
             {
                 breakpoint: 425,
                 settings: {
-                    slidesToShow: 1.1,
+                    arrows: false,
+                    slidesToShow: 1.2,
                 }
             },
         ]
@@ -46,13 +47,13 @@ if (factory) {
     });
 }
 
-const divTop = document.getElementById('burgerMenu');
-if (factory) {
-    const isHeder = document.getElementById('divTop');
-    factory.addEventListener("click", function (e) {
-        isHeder.classList.toggle('_activee');
-    });
-}
+// const divTop = document.getElementById('burgerMenu');
+// if (factory) {
+//     const isHeder = document.getElementById('divTop');
+//     factory.addEventListener("click", function (e) {
+//         isHeder.classList.toggle('_activee');
+//     });
+// }
 
 const body = document.getElementById('burgerMenu');
 if (factory) {

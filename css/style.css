@@ -150,6 +150,21 @@ body{
     height: 60px;
 }
 
+.imgCarts:hover{
+    width: 65px;
+    height: 65px;
+}
+
+.imgCarts2:hover{
+    width: 65px;
+    height: 65px;
+}
+
+.imgCarts3:hover{
+    width: 65px;
+    height: 65px;
+}
+
 
 /* new section */
 
@@ -214,7 +229,9 @@ body{
 }
 
 .buttomSection1:hover{
-    background-color: red;
+    background-color: rgb(255, 145, 0);
+    width: 205px;
+    height: 50px;
 }
 
 /* new section */
@@ -331,6 +348,12 @@ body{
     border: 0;
     margin: 0 auto;
     margin-bottom: 30px;
+}
+
+.sectoin2Button:hover{
+    background-color: rgb(255, 145, 0);
+    width: 235px;
+    height: 45px;
 }
 
 .h2Section{
@@ -467,8 +490,8 @@ body{
     color: #1F1F1F;
     list-style: none;
     padding-bottom: 20px;
-    display: flex;
-    align-items: center;
+    display: block;
+    margin-left: 40px;
 }
 
 .spanUlText{
@@ -481,6 +504,8 @@ body{
     border-radius: 50px;
     position: relative;
     margin-right: 15px;
+    left: -34px;
+    top: 25px;
 
 }
 
@@ -498,7 +523,7 @@ body{
 .spanUlText::after{
     content: "";
     background-color: #fff;
-    width: 7px;
+    width: 8px;
     height: 3px;
     transform: rotate(64deg);
     position: absolute;
@@ -506,6 +531,7 @@ body{
     left: 3px;
     border-radius: 8px;
 }
+
 
 .button_ulSection4{
     width: 270px;
@@ -519,6 +545,12 @@ body{
     line-height: 27px;
     color: #FFFFFF;
     border: 0;
+}
+
+.button_ulSection4:hover{
+    background-color: rgb(255, 145, 0);
+    width: 275px;
+    height: 45px;
 }
 
 /* new section */
@@ -575,6 +607,8 @@ body{
 
 .buttonSection5{
     display: flex;
+    align-items: center;
+    justify-content: center;
     background: #FF8126;
     border-radius: 5px;
     border: 0;
@@ -587,6 +621,15 @@ body{
     position: absolute;
     z-index: 5;
     margin-top: 290px;
+    width: 330px;
+    height: 45px;
+}
+
+.buttonSection5:hover{
+    width: 335px;
+    height: 50px;
+    background-color: rgb(255, 145, 0);
+    
 }
 
 .divButtonSection5{
@@ -640,6 +683,12 @@ body{
     line-height: 27px;
     color: #FFFFFF;
     margin-top: 30px;
+}
+
+.buttonSection6:hover{
+    width: 125px;
+    height: 50px;
+    background-color: rgb(255, 145, 0);  
 }
 
 .section6DivContainer{
@@ -701,16 +750,15 @@ body{
 }
 
 .divImgSlider{
-    margin-left: 15px;
-    margin-right: 15px;
+    margin: 15px 15px;
 } 
 
 .divSliderContainer{
     border: 15;
     background: #FFFFFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-    margin-left: 15px;
-    margin-right: 15px;
+   margin: 15px 15px 15px 15px;
+
 }
 
 .divSlider{
@@ -839,11 +887,18 @@ body{
 .imgSection8Icons{
     max-width: 60px;
     width: 100%;
+    max-height: 60px;
     height: 100%;
     padding-left: 15px;
     padding-right: 15px;
 }
 
+.imgSection8Icons:hover{
+    max-width: 70px;
+    width: 100%;
+    max-height: 70px;
+    height: 100%;
+}
 
 /* new section */
 
@@ -863,13 +918,18 @@ body{
 
 .h2Footer{
     display: flex;
-    font-family: 'Poppins';
+    margin: 10px 0px;
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 500;
-    font-size: 15px;
-    line-height: 22px;
+    font-size: 20px;
+    line-height: 30px;
     color: #1F1F1F;
-    margin: 10px 0px;
+}
+
+.h2Footer:hover{
+    font-size: 22px;
+    color:darkgray;
 }
 
 .ulFooter{
@@ -886,6 +946,15 @@ body{
     line-height: 22px;
     color: #3D3D3D;
     padding: 5px 0;
+}
+
+.ulFooter li:hover{
+    font-size: 17px;
+    color: rgba(0, 0, 0, 0.900);;
+}
+
+.imgFonts2{
+    display: none;
 }
 
 @media (max-width: 1150px){
@@ -930,14 +999,17 @@ body{
         justify-content: center;
     }
 
-    .ulSection4 li{
-        margin: 0 5px;
-    }
-
     .divSectionContainer{
         flex-wrap: wrap;
     }
 }
+
+@media (max-width: 1120px){
+    .section2_DivContainer{
+        margin-bottom: 30px;
+    }
+}
+
 
 @media (max-width: 1065px){
     .ulHeder li{
@@ -989,6 +1061,22 @@ body{
 
     .imgCarts3{
         display: contents;
+    }
+
+    
+    .imgCarts:hover{
+        width: 37px;
+        height: 37px;
+    }
+
+    .imgCarts2:hover{
+        width: 65px;
+        height: 65px;
+    }
+
+    .imgCarts3:hover{
+        width: 65px;
+        height: 65px;
     }
 
     .burgerMenu{
@@ -1078,6 +1166,10 @@ body{
 
     }
 
+    .heder._activee .divTop {
+        display: none;
+    }
+
     .heder._activee .ulHeder li{
         padding-bottom: 30px;
     }
@@ -1159,12 +1251,15 @@ body{
     
     .divFooterContainer{
         flex-wrap: wrap;
-        width: 80%;
     }
 
     .divFooterContainer div{
         padding: 10px 20px;
         margin: 0 auto;
+    }
+
+    .divSectionContainer{
+        width: 100%;
     }
 
     .imgSection8{
@@ -1176,7 +1271,7 @@ body{
     }
     
     .h2Section7{
-        padding-bottom: 10px;
+        padding-bottom: 0px;
     }
 
     .imgSection8{
@@ -1185,6 +1280,10 @@ body{
 
     .textSection1{
         margin-top: 0px;
+    }
+
+    .section7Span{
+        padding-bottom: 20px;
     }
     
 }
@@ -1207,14 +1306,143 @@ body{
     }
 }
 
+@media(max-width: 736px){
+    .button_ulSection4{
+        margin-left: 39px;
+    }
+}
+
 @media(max-width: 570px){
     .divimgSection6 img{
         display: none;
     }
+
+    .imgFonsSection5{
+        min-height: 490px;
+    }
+
+    .buttonSection5{
+        margin-top: 380px;
+    }
+
+    .imgLogoSection5{
+        padding-top: 220px;
+    }
+
+    .imgSection3{
+        display: block;
+        margin: 0 auto;
+    }
+
+    .section4H2{
+        margin-left: 16px;
+    }
+
+    .text2Section4{
+        margin-left: 16px;
+    }
+}
+
+@media(max-width: 500px){
+    .imgFons{
+        display: contents;
+    }
+
+    .imgFonts2{
+        display: flex;
+        width: 100%;
+        max-height: 430px;
+        height: 100%;
+    }
+
+    .divFooterContainer{
+        flex-direction: column;
+    }
+
+    .logoFooter{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 47px;
+    }
+
+    .divFooterContainer div{
+        margin: 0;
+    }
+    
+    .h2Footer{
+        margin-bottom: 28px;
+    }
+    
+    .ulFooter{
+        padding-bottom: 70px;
+    }
+
+    .h2Section{
+        font-size: 30px;
+    }
+
+    .spanSection{
+        font-size: 30px;
+    }
 }
 
 @media(max-width: 425px){
+
     .divFooterContainer{
         flex-direction: column;
+    }
+
+    .h2Section7{
+        font-size: 30px;
+    }
+
+    .textDivTop {
+        font-size: 10px;
+        justify-content: flex-start;
+        margin-left: 16px;
+        width: 81%;
+    }
+
+    .divX{
+        right: 0px;
+        top: 49px; 
+    }
+
+    .text_2Section1{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .buttomSection1 {
+        left: 25%;
+    }
+
+    .text_2Section1 {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .textSection1{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .divSection1{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .section4H2{
+        font-size: 30px;
+        justify-content: flex-start;
+    }
+
+    .section4Span{
+        font-size: 30px;
+    }
+
+    .slick-track{
+        margin-left: 45px;
     }
 }
