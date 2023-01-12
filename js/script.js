@@ -47,14 +47,6 @@ if (factory) {
     });
 }
 
-// const divTop = document.getElementById('burgerMenu');
-// if (factory) {
-//     const isHeder = document.getElementById('divTop');
-//     factory.addEventListener("click", function (e) {
-//         isHeder.classList.toggle('_activee');
-//     });
-// }
-
 const body = document.getElementById('burgerMenu');
 if (factory) {
     const isHeder = document.getElementById('body');
