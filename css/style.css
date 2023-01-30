@@ -3,16 +3,27 @@ body{
 }
 .divTop{
     background-color: #C2E8CE;
-    max-width: 1280px;
     width: 100%;
     height: 50px;
     margin: 0 auto;
     position: relative;
 }
 
+.DivTopContainer{
+    max-width: 1280px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+ 
+
 .divX{
     position: absolute;
     right: 17px;
+    width: 45px;
+    height: 50px;
+    top: 0;
 }
 
 .divX::after{
@@ -21,7 +32,7 @@ body{
     position: absolute;
     width: 20px;
     height: 2px;
-    top: -24px;
+    top: 24px;
     display: block;
     z-index: 6;
     border-radius: 7px;
@@ -35,7 +46,7 @@ body{
     position: absolute;
     width: 20px;
     height: 2px;
-    top: -24px;
+    top: 24px;
     display: block;
     z-index: 6;
     border-radius: 7px;
@@ -108,6 +119,7 @@ body{
 }
 
 .ulHeder li{
+    position: relative;
     list-style: none;
     padding: 0px 22.5px;
     
@@ -124,7 +136,6 @@ body{
 }
 
 .ulHeder li a:hover{
-    font-size: 16px;
     color: gray;
 }
 
@@ -150,21 +161,36 @@ body{
     height: 60px;
 }
 
-.imgCarts:hover{
-    width: 65px;
-    height: 65px;
+.ulhederSubLiss{
+    width: 90%;
+    height: 100%;
+    padding: 0;
+    position: absolute;
+    z-index: 5;
+    display: none;
+    border-radius: 20px;
 }
 
-.imgCarts2:hover{
-    width: 65px;
-    height: 65px;
+.ulhederSubLiss li a{
+    color: rgb(0, 0, 0);
+    padding-left: 5px;
 }
 
-.imgCarts3:hover{
-    width: 65px;
-    height: 65px;
+.ulhederSubLiss li{
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: cadetblue;
+    position: relative;
+    padding: 0;
 }
 
+.ulHeder li:hover .ulhederSubLiss {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
 
 /* new section */
 
@@ -562,7 +588,6 @@ body{
 /* new section */
 
 .section5{
-    max-width: 1280px;
     width: 100%;
     height: 100%;
     margin: 0 auto;
@@ -571,16 +596,21 @@ body{
 
 .imgFonsSection5{
     width: 100%;
-    min-height: 400px;
+    max-height: 395px;
     height: 100%;
     position: relative;
+}
+
+.divS5Conteiner{
+    width: 100%;
+    height: 100%;
 }
 
 .h2Section5{
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 1280px;
+    margin-top: 60px;
     width: 100%;
     font-family: 'Cormorant';
     font-style: normal;
@@ -589,8 +619,6 @@ body{
     line-height: 48px;
     text-align: center;
     color: #fff;
-    padding-top: 60px;
-    margin: 0;
     position: absolute;
     z-index: 10;
 }
@@ -606,9 +634,9 @@ body{
     width: 100%;
     max-height: 130px;
     height: 100%;
-    padding-top: 130px;
     position: absolute;
     z-index: 12;
+    transform: translate(-10%, 100%);
 }
 
 .buttonSection5{
@@ -626,7 +654,7 @@ body{
     line-height: 27px;
     position: absolute;
     z-index: 5;
-    margin-top: 290px;
+    transform: translate(-4%, 16em);
     width: 330px;
     height: 45px;
 }
@@ -641,6 +669,12 @@ body{
 .divButtonSection5{
     display: flex;
     justify-content: center;
+}
+
+.divS5Conteiner{
+    display: flex;
+    width: 100%;
+    height: 100%;
 }
 
 /* new section */
@@ -850,7 +884,6 @@ body{
 /* new section */
 
 .section8{
-    max-width: 1280px;
     width: 100%;
     height: 100%;
     margin: 0 auto;
@@ -867,7 +900,6 @@ body{
     position: absolute;
     display: flex;
     justify-content: center;
-    max-width: 1280px;
     width: 100%;
     font-family: 'Cormorant';
     font-style: normal;
@@ -886,7 +918,6 @@ body{
     margin-top: 135px;
     position: absolute;
     z-index: 1000;
-    max-width: 1280px;
     width: 100%;
 }
 
@@ -934,7 +965,7 @@ body{
 }
 
 .h2Footer:hover{
-    font-size: 22px;
+    text-decoration: underline;
     color:darkgray;
 }
 
@@ -955,7 +986,7 @@ body{
 }
 
 .ulFooter li:hover{
-    font-size: 17px;
+    text-decoration: underline;
     color: rgba(0, 0, 0, 0.900);;
 }
 
@@ -1008,6 +1039,10 @@ body{
     .divSectionContainer{
         flex-wrap: wrap;
     }
+
+    .imgFonsSection5{
+        min-height: 478px;
+    }
 }
 
 @media (max-width: 1120px){
@@ -1049,8 +1084,17 @@ body{
         margin-top: 130px;
     }
 
+    .ulHeder li:hover .ulhederSubLiss {
+        display: block;
+        width: 87%;
+        height: 0%;
+        border-radius: 10px;
+        transform: translate(96px, -16px);
+    }
+
     .logoImg{
         display: flex;
+        justify-content: center;
         width: 100%;
         height: 100%;
         margin: 0;
@@ -1211,6 +1255,7 @@ body{
         z-index: 11;
         margin-right: 70px;
         transition: 0.4s;
+        transform: translate(-100%, 0px);
     }
 
     .heder._activee .imgCarts3{
@@ -1219,7 +1264,7 @@ body{
         z-index: 11;
         margin-left: 70px;
         transition: 0.4s;
-        
+        transform: translate(-100%, 0px);
     }
 
     .heder._activee .burgerMenu::before{
@@ -1324,16 +1369,16 @@ body{
         display: none;
     }
 
-    .imgFonsSection5{
-        min-height: 490px;
+    .h2Section5{
+        flex-wrap: wrap;
     }
 
     .buttonSection5{
-        margin-top: 380px;
+        transform: translate(-1%, 21em);
     }
 
     .imgLogoSection5{
-        padding-top: 220px;
+        transform: translate(-10%, 161%);
     }
 
     .imgSection3{
