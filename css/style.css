@@ -1,24 +1,45 @@
-body{
+body {
     margin: 0;
 }
-.divTop{
+
+.divTop {
     background-color: #C2E8CE;
+    transition: 0.5s;
     width: 100%;
     height: 50px;
     margin: 0 auto;
     position: relative;
 }
 
-.DivTopContainer{
+.divTop.present {
+    background-color: #fff;
+    transition: 0.5s;
+}
+
+.divTop.present .textDivTop {
+    display: none;
+}
+
+.divTop.present .divX::after {
+    transform: rotate(134deg);
+    transition: 0.5s;
+}
+
+.divTop.present .divX::before {
+    transform: rotate(-134deg);
+    transition: 0.5s;
+}
+
+.DivTopContainer {
     max-width: 1280px;
     width: 100%;
     height: 100%;
     margin: 0 auto;
     position: relative;
 }
- 
 
-.divX{
+
+.divX {
     position: absolute;
     right: 17px;
     width: 45px;
@@ -26,7 +47,7 @@ body{
     top: 0;
 }
 
-.divX::after{
+.divX::after {
     content: '';
     background-color: black;
     position: absolute;
@@ -37,10 +58,11 @@ body{
     z-index: 6;
     border-radius: 7px;
     transform: rotate(-47deg);
+    transition: 0.3s;
     right: 20px;
 }
 
-.divX::before{
+.divX::before {
     content: '';
     background-color: black;
     position: absolute;
@@ -52,14 +74,14 @@ body{
     border-radius: 7px;
     transition: all 0.3s ease 0s;
     transform: rotate(47deg);
-    right: 20px; 
+    right: 20px;
 }
 
-.divX span{
+.divX span {
     content: "";
 }
 
-.textDivTop{
+.textDivTop {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,7 +97,7 @@ body{
 
 /* new section */
 
-.heder{
+.heder {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -83,31 +105,31 @@ body{
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    padding-bottom: 20px;
 }
 
-.logoImg{
+.logoImg {
     display: flex;
     width: 10%;
     height: 100%;
     margin-left: 55px;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.hederLogo{
+.hederLogo {
     max-width: 110px;
     width: 100%;
     max-height: 95px;
     height: 100%;
 }
 
-.naw{
+.naw {
     max-width: 725px;
     width: 100%;
     height: 100%;
 }
 
-.ulHeder{
+.ulHeder {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -118,14 +140,14 @@ body{
     margin: 0;
 }
 
-.ulHeder li{
+.ulHeder li {
     position: relative;
     list-style: none;
     padding: 0px 22.5px;
-    
+
 }
 
-.ulHeder li a{
+.ulHeder li a {
     font-family: "Poppins";
     font-style: normal;
     font-weight: 500;
@@ -135,33 +157,37 @@ body{
     color: #1F1F1F;
 }
 
-.ulHeder li a:hover{
+.ulHeder li a:hover {
     color: gray;
 }
 
-.divCarts{
+.divCarts {
     display: flex;
     max-width: 220px;
     width: 100%;
     height: 100%;
 }
 
-.imgCarts{
+.carts a {
+    text-decoration: none;
+}
+
+.imgCarts {
     width: 60px;
     height: 60px;
 }
 
-.imgCarts2{
+.imgCarts2 {
     width: 60px;
     height: 60px;
 }
 
-.imgCarts3{
+.imgCarts3 {
     width: 60px;
     height: 60px;
 }
 
-.ulhederSubLiss{
+.ulhederSubLiss {
     width: 90%;
     height: 100%;
     padding: 0;
@@ -171,16 +197,16 @@ body{
     border-radius: 20px;
 }
 
-.ulhederSubLiss li a{
+.ulhederSubLiss li a {
     color: rgb(0, 0, 0);
     padding-left: 5px;
 }
 
-.ulhederSubLiss li{
+.ulhederSubLiss li {
     width: 100%;
     height: 100%;
     display: block;
-    background: cadetblue;
+    background: #FF8126;
     position: relative;
     padding: 0;
 }
@@ -194,48 +220,49 @@ body{
 
 /* new section */
 
-.section1{
+.section1 {
     max-width: 1280px;
     width: 100%;
     margin: 0 auto;
     padding-bottom: 50px;
 }
 
-.imgFons{
+.imgFons {
     width: 100%;
     height: 100%;
     position: relative;
 
 }
 
-.divSection1{
+.divSection1 {
     position: absolute;
     margin-left: 55px;
     z-index: 10;
+    margin-top: 125px;
 }
 
-.textSection1{
+.textSection1 {
     font-family: "Cormorant";
     font-style: normal;
     font-weight: 700;
     font-size: 50px;
     line-height: 61px;
     color: #1F1F1F;
-    margin-bottom: 5px;
-    margin-top: 95px;
+    margin: 0;
 }
 
-.text_2Section1{
+.text_2Section1 {
     font-family: "Poppins";
     font-style: normal;
     font-weight: 300;
     font-size: 26px;
     line-height: 39px;
     color: #1F1F1F;
-    margin: 0;
+    margin-top: 0px;
+    margin-bottom: 40px;
 }
 
-.buttomSection{
+.buttomSection {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -251,11 +278,9 @@ body{
     font-size: 18px;
     line-height: 27px;
     color: #fff;
-    margin-top: 230px;
-    margin-left: 55px;
 }
 
-.buttomSection1:hover{
+.buttomSection:hover {
     background-color: rgb(255, 145, 0);
     width: 205px;
     height: 50px;
@@ -264,25 +289,25 @@ body{
 /* new section */
 
 
-.section2{
+.section2 {
     max-width: 1280px;
     width: 100%;
     margin: 0 auto;
     padding-bottom: 80px;
 }
 
-.divSectionContainer{
+.divSectionContainer {
     display: flex;
     width: 94%;
     margin: 0 auto;
 }
 
-.section2_DivContainer{
+.section2_DivContainer {
     margin-left: 15px;
     margin-right: 15px;
 }
 
-.h2Section2{
+.h2Section2 {
     font-family: "Cormorant";
     font-style: normal;
     font-weight: 700;
@@ -294,7 +319,7 @@ body{
     padding-bottom: 40px;
 }
 
-.h2Span{
+.h2Span {
     font-family: "Cormorant";
     font-style: normal;
     font-weight: 700;
@@ -304,7 +329,7 @@ body{
     color: #FF8126;
 }
 
-.divSection2{
+.divSection2 {
     background: #F7F5F0;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
@@ -312,14 +337,14 @@ body{
     height: 100%;
 }
 
-.section2img{
+.section2img {
     max-width: 270px;
     width: 100%;
     max-height: 160px;
     height: 100%;
 }
 
-.text{
+.text {
     display: flex;
     justify-content: center;
     font-family: "Poppins";
@@ -333,7 +358,7 @@ body{
     padding-bottom: 10px;
 }
 
-.dolar{
+.dolar {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -348,7 +373,7 @@ body{
     text-indent: 5px;
 }
 
-.dolarSpan{
+.dolarSpan {
     font-family: "Poppins";
     font-style: normal;
     font-weight: 400;
@@ -358,7 +383,7 @@ body{
     color: #656565
 }
 
-.sectoin2Button{
+.sectoin2Button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -377,13 +402,13 @@ body{
     margin-bottom: 30px;
 }
 
-.sectoin2Button:hover{
+.sectoin2Button:hover {
     background-color: rgb(255, 145, 0);
     width: 235px;
     height: 45px;
 }
 
-.h2Section{
+.h2Section {
     font-family: 'Cormorant';
     font-style: normal;
     font-weight: 700;
@@ -395,7 +420,7 @@ body{
     padding-bottom: 47px;
 }
 
-.spanSection{
+.spanSection {
     font-family: 'Cormorant';
     font-style: normal;
     font-weight: 700;
@@ -408,43 +433,42 @@ body{
 /* new section */
 
 
-.section3{
+.section3 {
     max-width: 1280px;
     width: 100%;
     margin: 0 auto;
     padding-bottom: 80px;
 }
 
-.section3divContainer{
+.section3divContainer {
     display: flex;
     width: 94%;
     margin: 0 auto;
     flex-wrap: wrap;
 }
 
-.section3Div{
+.section3Div {
     padding-left: 15px;
     padding-right: 15px;
 }
 
-.imgSection3{
+.imgSection3 {
     width: 48px;
     height: 48px;
 }
 
-.section3textLogo{
+.section3textLogo {
     font-family: 'Cormorant';
     font-style: normal;
     font-weight: 700;
     font-size: 25px;
     line-height: 30px;
     color: #1F1F1F;
-    padding-top: 30px;
     padding-bottom: 10px;
     margin: 0;
 }
 
-.textContainerSection3{
+.textContainerSection3 {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -453,11 +477,13 @@ body{
     letter-spacing: -0.0015em;
     color: #1F1F1F;
     margin: 0;
+    max-width: 213px;
+    width: 100%;
 }
 
 /* new section */
 
-.section4{
+.section4 {
     max-width: 1203px;
     width: 100%;
     height: 100%;
@@ -465,7 +491,7 @@ body{
     padding-bottom: 90px;
 }
 
-.section4H2{
+.section4H2 {
     font-family: 'Cormorant';
     font-style: normal;
     font-weight: 700;
@@ -476,16 +502,16 @@ body{
     margin-bottom: 20px;
 }
 
-.divImgSection4_2{
+.divImgSection4_2 {
     display: none;
 }
 
-.divImgSection4{
+.divImgSection4 {
     width: 100%;
     height: 95%;
 }
 
-.text2Section4{
+.text2Section4 {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
@@ -494,7 +520,7 @@ body{
     color: #1F1F1F;
 }
 
-.section4Span{
+.section4Span {
     font-family: 'Cormorant';
     font-style: normal;
     font-weight: 700;
@@ -504,16 +530,16 @@ body{
     margin: 0;
 }
 
-.section4DivContent{
+.section4DivContent {
     display: flex;
     justify-content: space-between;
 }
 
-.ulSection4{
+.ulSection4 {
     padding: 0;
 }
 
-.ulSection4 li{
+.ulSection4 li {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -526,7 +552,7 @@ body{
     margin-left: 40px;
 }
 
-.spanUlText{
+.spanUlText {
     content: "";
     width: 25px;
     height: 25px;
@@ -541,7 +567,7 @@ body{
 
 }
 
-.spanUlText::before{
+.spanUlText::before {
     content: "";
     background-color: #fff;
     width: 13px;
@@ -552,7 +578,7 @@ body{
     right: 5px;
 }
 
-.spanUlText::after{
+.spanUlText::after {
     content: "";
     background-color: #fff;
     width: 8px;
@@ -565,9 +591,9 @@ body{
 }
 
 
-.button_ulSection4{
+.button_ulSection4 {
     width: 270px;
-    height: 40px;
+    height: 45px;
     background-color: #FF8126;
     border-radius: 5px;
     font-family: 'Poppins';
@@ -579,7 +605,7 @@ body{
     border: 0;
 }
 
-.button_ulSection4:hover{
+.button_ulSection4:hover {
     background-color: rgb(255, 145, 0);
     width: 275px;
     height: 45px;
@@ -587,26 +613,26 @@ body{
 
 /* new section */
 
-.section5{
+.section5 {
     width: 100%;
     height: 100%;
     margin: 0 auto;
     padding-bottom: 80px;
 }
 
-.imgFonsSection5{
+.imgFonsSection5 {
     width: 100%;
     max-height: 395px;
     height: 100%;
     position: relative;
 }
 
-.divS5Conteiner{
+.divS5Conteiner {
     width: 100%;
     height: 100%;
 }
 
-.h2Section5{
+.h2Section5 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -623,12 +649,12 @@ body{
     z-index: 10;
 }
 
-.imgSection5Logo{
+.imgSection5Logo {
     display: flex;
     justify-content: center;
 }
 
-.imgLogoSection5{
+.imgLogoSection5 {
     display: flex;
     max-width: 100px;
     width: 100%;
@@ -639,7 +665,7 @@ body{
     transform: translate(-10%, 100%);
 }
 
-.buttonSection5{
+.buttonSection5 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -659,19 +685,19 @@ body{
     height: 45px;
 }
 
-.buttonSection5:hover{
+.buttonSection5:hover {
     width: 335px;
     height: 50px;
     background-color: rgb(255, 145, 0);
-    
+
 }
 
-.divButtonSection5{
+.divButtonSection5 {
     display: flex;
     justify-content: center;
 }
 
-.divS5Conteiner{
+.divS5Conteiner {
     display: flex;
     width: 100%;
     height: 100%;
@@ -679,7 +705,7 @@ body{
 
 /* new section */
 
-.section6{
+.section6 {
     max-width: 1203px;
     width: 100%;
     height: 100%;
@@ -687,7 +713,7 @@ body{
     margin-bottom: 140px;
 }
 
-.textSection6{
+.textSection6 {
     font-family: 'Cormorant';
     font-style: normal;
     font-weight: 700;
@@ -697,11 +723,11 @@ body{
     margin-bottom: 20px;
 }
 
-.spanSection6{
+.spanSection6 {
     color: #1F1F1F;
 }
 
-.pSection6{
+.pSection6 {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
@@ -710,7 +736,7 @@ body{
     color: #1F1F1F;
 }
 
-.buttonSection6{
+.buttonSection6 {
     background: #FF8126;
     border-radius: 5px;
     border: 0;
@@ -725,23 +751,23 @@ body{
     margin-top: 30px;
 }
 
-.buttonSection6:hover{
+.buttonSection6:hover {
     width: 125px;
     height: 50px;
-    background-color: rgb(255, 145, 0);  
+    background-color: rgb(255, 145, 0);
 }
 
-.section6DivContainer{
+.section6DivContainer {
     display: flex;
 }
 
-.divTextSection6{
+.divTextSection6 {
     margin-left: 31px;
 }
 
 /* new section */
 
-.section7Slider{
+.section7Slider {
     max-width: 1280px;
     width: 100%;
     height: 100%;
@@ -749,7 +775,7 @@ body{
     padding-bottom: 80px;
 }
 
-.h2Section7{
+.h2Section7 {
     font-family: 'Cormorant';
     font-style: normal;
     font-weight: 700;
@@ -764,14 +790,14 @@ body{
     padding-bottom: 40px;
 }
 
-.logoSection7{
+.logoSection7 {
     display: flex;
     max-width: 630px;
     width: 100%;
     margin: 0 auto;
 }
 
-.section7Span{
+.section7Span {
     font-family: 'Cormorant';
     font-style: normal;
     font-weight: 700;
@@ -782,37 +808,37 @@ body{
     width: 100%;
     height: 100%;
     color: #1F1F1F;
-    
+
 }
 
-.divSlider{
+.divSlider {
     display: block;
 }
 
-.divImgSlider{
+.divImgSlider {
     margin: 15px 15px;
-} 
+}
 
-.divSliderContainer{
+.divSliderContainer {
     border: 15;
     background: #FFFFFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-   margin: 15px 15px 15px 15px;
+    margin: 15px 15px 15px 15px;
 
 }
 
-.divSlider{
+.divSlider {
     max-width: 1080px;
     width: 100%;
     margin: 0 auto;
 }
 
-.divImgSlider img{
+.divImgSlider img {
     width: 100%;
     height: 100%;
 }
 
-.slick-next.slick-arrow{
+.slick-next.slick-arrow {
     width: 40px;
     height: 40px;
     background-color: #FF8126;
@@ -822,7 +848,7 @@ body{
 }
 
 
-.slick-prev.slick-arrow{
+.slick-prev.slick-arrow {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -830,14 +856,14 @@ body{
     border: 1px solid #B3B3B3;
     left: -42px;
     position: absolute;
-    
+
 }
 
-.slick-next.slick-arrow{
+.slick-next.slick-arrow {
     border: 1px solid #B3B3B3;
 }
 
-.slick-next.slick-arrow::after{
+.slick-next.slick-arrow::after {
     content: "";
     position: absolute;
     background-color: #fff;
@@ -848,7 +874,7 @@ body{
     transform: rotate(142deg);
 }
 
-.slick-next.slick-arrow::before{
+.slick-next.slick-arrow::before {
     content: "";
     position: absolute;
     background-color: #fff;
@@ -859,7 +885,7 @@ body{
     transform: rotate(39deg);
 }
 
-.slick-prev.slick-arrow::before{
+.slick-prev.slick-arrow::before {
     content: "";
     position: absolute;
     background-color: #B3B3B3;
@@ -870,7 +896,7 @@ body{
     transform: rotate(-30deg);
 }
 
-.slick-prev.slick-arrow::after{
+.slick-prev.slick-arrow::after {
     content: "";
     position: absolute;
     background-color: #B3B3B3;
@@ -883,20 +909,20 @@ body{
 
 /* new section */
 
-.section8{
+.section8 {
     width: 100%;
     height: 100%;
     margin: 0 auto;
     background: rgba(255, 129, 38, 0.08);
 }
 
-.imgFontsSection8{
+.imgFontsSection8 {
     position: relative;
     width: 100%;
     height: 280px;
 }
 
-.textSection8{
+.textSection8 {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -912,7 +938,7 @@ body{
     padding-top: 60px;
 }
 
-.imgSection8{
+.imgSection8 {
     display: flex;
     justify-content: center;
     margin-top: 135px;
@@ -921,7 +947,7 @@ body{
     width: 100%;
 }
 
-.imgSection8Icons{
+.imgSection8Icons {
     max-width: 60px;
     width: 100%;
     max-height: 60px;
@@ -930,7 +956,7 @@ body{
     padding-right: 15px;
 }
 
-.imgSection8Icons:hover{
+.imgSection8Icons:hover {
     max-width: 70px;
     width: 100%;
     max-height: 70px;
@@ -939,7 +965,7 @@ body{
 
 /* new section */
 
-.footer{
+.footer {
     max-width: 1170px;
     width: 100%;
     height: 100%;
@@ -948,12 +974,12 @@ body{
     padding-bottom: 50px;
 }
 
-.divFooterContainer{
+.divFooterContainer {
     display: flex;
     justify-content: space-between;
 }
 
-.h2Footer{
+.h2Footer {
     display: flex;
     margin: 10px 0px;
     font-family: "Poppins";
@@ -964,17 +990,17 @@ body{
     color: #1F1F1F;
 }
 
-.h2Footer:hover{
+.h2Footer:hover {
     text-decoration: underline;
-    color:darkgray;
+    color: darkgray;
 }
 
-.ulFooter{
+.ulFooter {
     margin: 0;
     padding-left: 0;
 }
 
-.ulFooter li{
+.ulFooter li {
     list-style: none;
     font-family: 'Poppins';
     font-style: normal;
@@ -985,103 +1011,111 @@ body{
     padding: 5px 0;
 }
 
-.ulFooter li:hover{
+.ulFooter li:hover {
     text-decoration: underline;
-    color: rgba(0, 0, 0, 0.900);;
+    color: rgba(0, 0, 0, 0.900);
+    ;
 }
 
-.imgFonts2{
+.imgFonts2 {
     display: none;
 }
 
-@media (max-width: 1150px){
-    .divImgSection4{
+@media (max-width: 1150px) {
+    .divImgSection4 {
         display: none;
     }
 
-    .divImgSection4_2{
+    .divImgSection4_2 {
         display: flex;
         width: 90%;
         margin: 0 auto;
     }
 
-    .divSectionContainer{
+    .divSectionContainer {
         display: flex;
         justify-content: center;
         width: 80%;
     }
 
-    .section3divContainer{
+    .section3divContainer {
         display: flex;
         justify-content: center;
         width: 80%;
     }
 
-    .button_ulSection4{
+    .button_ulSection4 {
         margin-left: 110px;
     }
 
-    .ulSection4{
-        display: flex;
-        flex-wrap: wrap;
+    .section4DivContent {
+        display: block;
     }
 
-    .text2Section4{
-        display: flex;
-        justify-content: center;
+    .navSection4 {
+        margin-left: 40px;
     }
 
-    .section4H2{
+    .text2Section4 {
         display: flex;
         justify-content: center;
     }
 
-    .divSectionContainer{
+    .section4H2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .divSectionContainer {
         flex-wrap: wrap;
     }
 
-    .imgFonsSection5{
+    .imgFonsSection5 {
         min-height: 478px;
     }
 }
 
-@media (max-width: 1120px){
-    .section2_DivContainer{
+@media (max-width: 1120px) {
+    .section2_DivContainer {
         margin-bottom: 30px;
     }
 }
 
 
-@media (max-width: 1065px){
-    .ulHeder li{
+@media (max-width: 1065px) {
+    .ulHeder li {
         padding: 0px 17.5px;
     }
 
-    .ulHeder li a{
+    .ulHeder li a {
         font-size: 11px;
+    }
+
+    .divSection1 {
+        margin-top: 50px;
     }
 }
 
-@media (max-width: 880px){
+@media (max-width: 880px) {
 
-    .heder{
+    .text_2Section1 {
+        margin-bottom: 15px;
+    }
+
+    .heder {
         display: block;
         width: 100%;
         height: 115px;
         padding: 0;
     }
 
-    .hederLogo{
+    .hederLogo {
         max-width: 110px;
         width: 100%;
         max-height: 95px;
         height: 100%;
         margin: 0 auto;
         padding: 10px 0;
-    }
-
-    .buttomSection {
-        margin-top: 130px;
     }
 
     .ulHeder li:hover .ulhederSubLiss {
@@ -1092,7 +1126,7 @@ body{
         transform: translate(96px, -16px);
     }
 
-    .logoImg{
+    .logoImg {
         display: flex;
         justify-content: center;
         width: 100%;
@@ -1100,7 +1134,7 @@ body{
         margin: 0;
     }
 
-    .imgCarts{  
+    .imgCarts {
         width: 32px;
         height: 32px;
         position: absolute;
@@ -1109,31 +1143,31 @@ body{
         left: 16px;
     }
 
-    .imgCarts2{
+    .imgCarts2 {
         display: contents;
     }
 
-    .imgCarts3{
+    .imgCarts3 {
         display: contents;
     }
 
-    
-    .imgCarts:hover{
+
+    .imgCarts:hover {
         width: 37px;
         height: 37px;
     }
 
-    .imgCarts2:hover{
+    .imgCarts2:hover {
         width: 65px;
         height: 65px;
     }
 
-    .imgCarts3:hover{
+    .imgCarts3:hover {
         width: 65px;
         height: 65px;
     }
 
-    .burgerMenu{
+    .burgerMenu {
         width: 32px;
         height: 32px;
         border-radius: 50%;
@@ -1143,7 +1177,7 @@ body{
         top: 92px;
     }
 
-    .burgerMenu::before{
+    .burgerMenu::before {
         content: "";
         width: 4px;
         height: 4px;
@@ -1157,7 +1191,7 @@ body{
         transition: 0.4s;
     }
 
-    .burgerMenuSpan{
+    .burgerMenuSpan {
         width: 4px;
         height: 4px;
         background: #fff;
@@ -1169,7 +1203,7 @@ body{
         left: 13px;
     }
 
-    .burgerMenu::after{
+    .burgerMenu::after {
         content: "";
         width: 4px;
         height: 4px;
@@ -1183,31 +1217,29 @@ body{
         transition: 0.4s;
     }
 
-  
-
-    .ulHeder{
+    .ulHeder {
         flex-direction: column;
     }
 
-    .ulHeder{
+    .ulHeder {
         position: absolute;
         z-index: 10;
         left: -100%;
         transition: 0.4s;
     }
 
-    .divCarts{
+    .divCarts {
         max-width: 100%;
         justify-content: center;
     }
 
-    .carts{
+    .carts {
         display: flex;
         justify-content: center;
         width: 0;
     }
 
-    .heder._activee .ulHeder { 
+    .heder._activee .ulHeder {
         left: 0px;
         background: #fff;
         z-index: 11;
@@ -1220,36 +1252,32 @@ body{
 
     }
 
-    .reletiv._activee .divTop {
-        display: none;
-    }
-
-    .heder._activee .ulHeder li{
+    .heder._activee .ulHeder li {
         padding-bottom: 30px;
     }
 
-    .heder._activee .ulHeder img{
+    .heder._activee .ulHeder img {
         transform: rotate(-90deg);
     }
 
-    .divTop._activee{
+    .divTop._activee {
         position: absolute;
         left: -100%;
         transition: 0.4s;
     }
 
-    .naw{
+    .naw {
         position: absolute;
         overflow: auto;
         max-width: 100%;
     }
 
-    .reletiv._activee{
+    .reletiv._activee {
         overflow: hidden;
     }
-    
 
-    .heder._activee .imgCarts2{
+
+    .heder._activee .imgCarts2 {
         display: flex;
         position: absolute;
         z-index: 11;
@@ -1258,7 +1286,7 @@ body{
         transform: translate(-100%, 0px);
     }
 
-    .heder._activee .imgCarts3{
+    .heder._activee .imgCarts3 {
         display: flex;
         position: absolute;
         z-index: 11;
@@ -1267,7 +1295,7 @@ body{
         transform: translate(-100%, 0px);
     }
 
-    .heder._activee .burgerMenu::before{
+    .heder._activee .burgerMenu::before {
         width: 18px;
         transform: rotate(222deg);
         top: 13px;
@@ -1276,12 +1304,12 @@ body{
         transition: 0.5s;
     }
 
-    .heder._activee .burgerMenuSpan{
+    .heder._activee .burgerMenuSpan {
         display: none;
         transition: 0.5s;
     }
 
-    .heder._activee .burgerMenu::after{
+    .heder._activee .burgerMenu::after {
         border-radius: 5px;
         top: 9px;
         left: 7px;
@@ -1291,165 +1319,171 @@ body{
         transition: 0.5s;
     }
 
-    .heder._activee .burgerMenu{
-        top: 42px;
-    }
-
-    .heder._activee .imgCarts{
-        top: 42px;
-    }
-
-    .section6DivContainer{
+    .section6DivContainer {
         flex-wrap: wrap;
         justify-content: center;
     }
-    
-    .divFooterContainer{
+
+    .divFooterContainer {
         flex-wrap: wrap;
     }
 
-    .divFooterContainer div{
+    .divFooterContainer div {
         padding: 10px 20px;
         margin: 0 auto;
     }
 
-    .divSectionContainer{
+    .divSectionContainer {
         width: 100%;
     }
 
-    .imgSection8{
+    .imgSection8 {
         flex-wrap: wrap;
     }
-    
-    .logoSection7{
+
+    .logoSection7 {
         flex-wrap: wrap;
     }
-    
-    .h2Section7{
+
+    .h2Section7 {
         padding-bottom: 0px;
     }
 
-    .imgSection8{
+    .imgSection8 {
         flex-wrap: wrap;
     }
 
-    .textSection1{
+    .textSection1 {
         margin-top: 0px;
     }
 
-    .section7Span{
+    .section7Span {
         padding-bottom: 20px;
     }
-    
+
 }
 
-@media(max-width: 700px){
-    .textSection1{
+@media(max-width: 700px) {
+    .textSection1 {
         display: flex;
         flex-wrap: wrap;
         font-size: 28px;
     }
 
-    .text_2Section1{
+    .text_2Section1 {
         display: flex;
         flex-wrap: wrap;
         font-size: 15px;
     }
 
+    .divSection1 {
+        margin-top: 20px;
+    }
+
 }
 
-@media(max-width: 736px){
-    .button_ulSection4{
+@media(max-width: 736px) {
+    .button_ulSection4 {
         margin-left: 39px;
+    }
+
+    .ulSection4 li {
+        margin-left: 30px;
     }
 }
 
-@media(max-width: 570px){
-    .divimgSection6 img{
+@media(max-width: 570px) {
+    .divimgSection6 img {
         display: none;
     }
 
-    .h2Section5{
+    .h2Section5 {
         flex-wrap: wrap;
     }
 
-    .buttonSection5{
+    .buttonSection5 {
         transform: translate(-1%, 21em);
     }
 
-    .imgLogoSection5{
+    .imgLogoSection5 {
         transform: translate(-10%, 161%);
     }
 
-    .imgSection3{
+    .imgSection3 {
         display: block;
         margin: 0 auto;
+        padding-bottom: 20px;
+        padding-top: 50px;
     }
 
-    .imgFontsSection8{
+    .imgFontsSection8 {
         height: 413px;
     }
 
-    .section4H2{
+    .section4H2 {
         margin-left: 16px;
     }
 
-    .text2Section4{
+    .text2Section4 {
         margin-left: 16px;
     }
 }
 
-@media(max-width: 500px){
-    .imgFons{
+@media(max-width: 500px) {
+    .imgFons {
         display: contents;
     }
 
-    .imgFonts2{
+    .imgFonts2 {
         display: flex;
         width: 100%;
         max-height: 430px;
         height: 100%;
     }
 
-    .divFooterContainer{
+    .divFooterContainer {
         flex-direction: column;
     }
 
-    .logoFooter{
+    .logoFooter {
         display: flex;
         align-items: center;
         justify-content: center;
         padding-bottom: 47px;
     }
 
-    .divFooterContainer div{
+    .divFooterContainer div {
         margin: 0;
     }
-    
-    .h2Footer{
+
+    .ulSection4 li {
+        margin-left: 15px;
+    }
+
+    .h2Footer {
         margin-bottom: 28px;
     }
-    
-    .ulFooter{
+
+    .ulFooter {
         padding-bottom: 70px;
     }
 
-    .h2Section{
+    .h2Section {
         font-size: 30px;
     }
 
-    .spanSection{
+    .spanSection {
         font-size: 30px;
     }
 }
 
-@media(max-width: 425px){
+@media(max-width: 425px) {
 
-    .divFooterContainer{
+    .divFooterContainer {
         flex-direction: column;
     }
 
-    .h2Section7{
+    .h2Section7 {
         font-size: 30px;
     }
 
@@ -1460,11 +1494,11 @@ body{
         width: 81%;
     }
 
-    .divX{
-        right: 0px 
+    .divX {
+        right: 0px
     }
 
-    .text_2Section1{
+    .text_2Section1 {
         width: 100%;
         justify-content: center;
     }
@@ -1477,57 +1511,65 @@ body{
     .text_2Section1 {
         width: 100%;
         justify-content: center;
+        margin-bottom: 10px;
     }
 
-    .textSection1{
+    .textSection1 {
         width: 100%;
+        height: 40px;
         justify-content: center;
     }
 
-    .divSection1{
+    .divSection1 {
         width: 100%;
         margin: 0 auto;
     }
 
-    .section4H2{
+    .section4H2 {
         font-size: 30px;
         justify-content: flex-start;
     }
 
-    .section4Span{
+    .section4Span {
         font-size: 30px;
     }
 
-    .slick-track{
+    .slick-track {
         margin-left: 45px;
     }
 
-    .buttonSection5{
+    .buttonSection5 {
         width: 90%;
     }
 
-    .button_ulSection4{
-        margin-left: 22px;
+    .button_ulSection4 {
+        margin-left: 0px;
     }
 
     .textSection6 {
         font-size: 30px;
     }
 
-    .divTextSection6{
+    .divTextSection6 {
         margin-left: 16px;
     }
 
-    .pSection6{
+    .pSection6 {
         font-size: 15px;
     }
 
-    .buttonSection6{
+    .buttonSection6 {
         position: absolute;
         left: 27%;
     }
 
-    .imgSection8Icons{
+    .imgSection8Icons {
         padding-bottom: 50px;
+    }
+}
+
+@media(max-width: 375px) {
+    .slick-track {
+        margin-left: 57px;
     }
 }

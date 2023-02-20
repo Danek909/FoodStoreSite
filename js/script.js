@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $('.divSlider').slick({
         infinite: true,
-        slidesToScroll:1,
+        slidesToScroll: 1,
         slidesToShow: 5,
         arrows: true,
         dots: false,
@@ -37,23 +37,26 @@ $(document).ready(function () {
             },
         ]
     });
+
+    const factory = document.getElementById('burgerMenu');
+    if (factory) {
+        const isHeder = document.getElementById('heder');
+        factory.addEventListener("click", function (e) {
+            isHeder.classList.toggle('_activee');
+        });
+    }
+
+    const body = document.getElementById('burgerMenu');
+    if (factory) {
+        const isHeder = document.getElementById('body');
+        factory.addEventListener("click", function (e) {
+            isHeder.classList.toggle('_activee');
+        });
+    }
+
+    const isHeder = document.getElementById('divTop');
+    const divX = document.getElementById('divX');
+    divX.addEventListener("click", () => {
+        isHeder.classList.toggle("present");
+    });
 });
-
-const factory = document.getElementById('burgerMenu');
-if (factory) {
-    const isHeder = document.getElementById('heder');
-    factory.addEventListener("click", function (e) {
-        isHeder.classList.toggle('_activee');
-    });
-}
-
-const body = document.getElementById('burgerMenu');
-if (factory) {
-    const isHeder = document.getElementById('body');
-    factory.addEventListener("click", function (e) {
-        isHeder.classList.toggle('_activee');
-    });
-}
-
-
-
