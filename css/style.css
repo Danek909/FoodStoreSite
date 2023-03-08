@@ -12,8 +12,7 @@ body {
 }
 
 .divTop.present {
-    background-color: #fff;
-    transition: 0.5s;
+    display: none
 }
 
 .divTop.present .textDivTop {
@@ -60,6 +59,130 @@ body {
     transform: rotate(-47deg);
     transition: 0.3s;
     right: 20px;
+}
+
+.strilka::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    transform: rotate(37deg);
+    z-index: 10;
+    width: 7px;
+    height: 2px;
+    background: #656565;
+}
+
+.strilka {
+    position: absolute;
+    transition: 0.2s;
+    left: 106px;
+    width: 20px;
+    height: 20px;
+}
+
+
+.strilka::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    transform: rotate(-40deg);
+    z-index: 10;
+    width: 7px;
+    height: 2px;
+    background-color: #656565;
+}
+
+.ulHederButton.present .strilka {
+    transform: rotate(85deg);
+    transition: 0.2s;
+    top: 0px;
+    left: 114px;
+}
+
+.strilka2::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    transform: rotate(37deg);
+    z-index: 10;
+    width: 7px;
+    height: 2px;
+    background: #656565;
+}
+
+.strilka2 {
+    position: absolute;
+    transition: 0.2s;
+    left: 133px;
+    width: 20px;
+    height: 20px;
+}
+
+
+.strilka2::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    transform: rotate(-40deg);
+    z-index: 10;
+    width: 7px;
+    height: 2px;
+    background-color: #656565;
+}
+
+.ulHederButton.present .strilka2 {
+    transform: rotate(85deg);
+    top: 0px;
+    left: 148px;
+}
+
+.strilka2._activee {
+    transform: rotate(87deg);
+    transition: 0.2s;
+    left: 138px;
+}
+
+.strilka3::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    transform: rotate(37deg);
+    z-index: 10;
+    width: 7px;
+    height: 2px;
+    background: #656565;
+}
+
+.strilka3 {
+    position: absolute;
+    transition: 0.2s;
+    left: 140px;
+    width: 20px;
+    height: 20px;
+}
+
+
+.strilka3::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    transform: rotate(-40deg);
+    z-index: 10;
+    width: 7px;
+    height: 2px;
+    background-color: #656565;
+}
+
+.ulHederButton.present .strilka3 {
+    transform: rotate(85deg);
+    top: 0px;
+    left: 148px;
+}
+
+.strilka3._activee {
+    transform: rotate(87deg);
+    transition: 0.2s;
+    left: 148px;
 }
 
 .divX::before {
@@ -124,7 +247,7 @@ body {
 }
 
 .naw {
-    max-width: 725px;
+    max-width: 760px;
     width: 100%;
     height: 100%;
 }
@@ -140,6 +263,17 @@ body {
     margin: 0;
 }
 
+.ulHederButton {
+    border: 0;
+    background-color: #fff;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    color: #1F1F1F;
+}
+
 .ulHeder li {
     position: relative;
     list-style: none;
@@ -147,7 +281,7 @@ body {
 
 }
 
-.ulHeder li a {
+.ulHeder a {
     font-family: "Poppins";
     font-style: normal;
     font-weight: 500;
@@ -193,7 +327,6 @@ body {
     padding: 0;
     position: absolute;
     z-index: 5;
-    display: none;
     border-radius: 20px;
 }
 
@@ -209,13 +342,6 @@ body {
     background: #FF8126;
     position: relative;
     padding: 0;
-}
-
-.ulHeder li:hover .ulhederSubLiss {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
 }
 
 /* new section */
@@ -1028,8 +1154,9 @@ body {
 
     .divImgSection4_2 {
         display: flex;
-        width: 90%;
-        margin: 0 auto;
+        max-width: 550px;
+        width: 100%;
+        margin-left: 80px;
     }
 
     .divSectionContainer {
@@ -1083,11 +1210,28 @@ body {
 
 
 @media (max-width: 1065px) {
+
+    .strilka {
+        left: 78px;
+    }
+
+    .strilka2 {
+        left: 98px;
+    }
+
+    .strilka3 {
+        left: 104px;
+    }
+
     .ulHeder li {
         padding: 0px 17.5px;
     }
 
     .ulHeder li a {
+        font-size: 11px;
+    }
+
+    .ulHederButton {
         font-size: 11px;
     }
 
@@ -1100,6 +1244,34 @@ body {
 
     .text_2Section1 {
         margin-bottom: 15px;
+    }
+
+    .ulHederButton {
+        font-size: 20px;
+    }
+
+    .strilka {
+        left: 136px;
+    }
+
+    .ulHederButton.present .strilka {
+        left: 136px;
+    }
+
+    .strilka2 {
+        left: 164px;
+    }
+
+    .strilka2._activee {
+        left: 172px;
+    }
+
+    .strilka3 {
+        left: 172px;
+    }
+
+    .strilka3._activee {
+        left: 178px;
     }
 
     .heder {
@@ -1118,12 +1290,17 @@ body {
         padding: 10px 0;
     }
 
-    .ulHeder li:hover .ulhederSubLiss {
-        display: block;
-        width: 87%;
-        height: 0%;
-        border-radius: 10px;
-        transform: translate(96px, -16px);
+    .ulhederSubLiss {
+        position: relative;
+        margin-top: 10px;
+    }
+
+    .ulHeder li a {
+        font-size: 20px;
+    }
+
+    .select {
+        font-size: 20px;
     }
 
     .logoImg {
@@ -1361,6 +1538,15 @@ body {
         padding-bottom: 20px;
     }
 
+
+
+
+    .select {
+        margin-bottom: 40px;
+        padding-left: 16px;
+    }
+
+
 }
 
 @media(max-width: 700px) {
@@ -1380,6 +1566,10 @@ body {
         margin-top: 20px;
     }
 
+    .divImgSection4_2 {
+        margin: 0 auto;
+    }
+
 }
 
 @media(max-width: 736px) {
@@ -1395,6 +1585,12 @@ body {
 @media(max-width: 570px) {
     .divimgSection6 img {
         display: none;
+    }
+
+    .divImgSection4_2 {
+        width: 90%;
+        margin-left: 16px;
+        margin-right: 16px;
     }
 
     .h2Section5 {
@@ -1430,6 +1626,13 @@ body {
 }
 
 @media(max-width: 500px) {
+
+    .textDivTop {
+        font-size: 13px;
+        margin-left: 16px;
+        justify-content: flex-start;
+    }
+
     .imgFons {
         display: contents;
     }

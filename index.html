@@ -41,72 +41,83 @@
                 <img class="hederLogo" src="images/hederLogo.webp" alt="deletet">
             </a>
         </div>
-        <naw class="naw">
+        <naw class="naw" id="mySelect">
             <ul class="ulHeder">
+
                 <li>
-                    <a href="#">Occasions</a>
-                    <img src="images/strilka.webp" alt="deletet">
-                    <ul class="ulhederSubLiss">
-                        <li>
-                            <a href="#">All Categories</a>
-                        </li>
-                        <li>
-                            <a href="#">Gifts & Bundles</a>
-                        </li>
-                        <li>
-                            <a href="#">Our Brands</a>
-                        </li>
-                        <li>
-                            <a href="#">About Us</a>
-                        </li>
-                    </ul>
+                    <button class="ulHederButton" onclick="ocasions()" id="buttonHeder">
+                        Occasions <span class="strilka" id="spanStrilka"></span></button>
+
+                    <div class="divUl" style="display:none" id="menuOcasions">
+                        <ul class="ulhederSubLiss">
+                            <li>
+                                <a href="#">All Categories</a>
+                            </li>
+                            <li>
+                                <a href="#">Gifts & Bundles</a>
+                            </li>
+                            <li>
+                                <a href="#">Our Brands</a>
+                            </li>
+                            <li>
+                                <a href="#">About Us</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <button class="ulHederButton" onclick="categories()" id="buttonHeder2">
+                        All Categories <span class="strilka2" id="spanStrilka2"></span></button>
+
+                    <div style="display:none" id="menuCategories">
+                        <ul class="ulhederSubLiss">
+                            <li>
+                                <a href="#">Occasions</a>
+                            </li>
+                            <li>
+                                <a href="#">Gifts & Bundles</a>
+                            </li>
+                            <li>
+                                <a href="#">Our Brands</a>
+                            </li>
+                            <li>
+                                <a href="#">About Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <button class="ulHederButton" onclick="Bundles()" id="buttonHeder3">
+                        <span class="strilka3" id="spanStrilka3"></span>
+                        Gifts & Bundles</button>
+                    <div style="display:none" id="menuBundles">
+                        <ul class="ulhederSubLiss">
+                            <li>
+                                <a href="#">Occasions</a>
+                            </li>
+                            <li>
+                                <a href="#">All Categories</a>
+                            </li>
+                            <li>
+                                <a href="#">Our Brands</a>
+                            </li>
+                            <li>
+                                <a href="#">About Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="#">Our Brands</a>
                 </li>
                 <li>
-                    <a href="#">All Categories</a>
-                    <img src="images/strilka.webp" alt="deletet">
-                    <ul class="ulhederSubLiss">
-                        <li>
-                            <a href="#">Occasions</a>
-                        </li>
-                        <li>
-                            <a href="#">Gifts & Bundles</a>
-                        </li>
-                        <li>
-                            <a href="#">Our Brands</a>
-                        </li>
-                        <li>
-                            <a href="#">About Us</a>
-                        </li>
+                    <a href="#">About Us</a>
                 </li>
             </ul>
-            </li>
-            <li>
-                <a href="#">Gifts & Bundles</a>
-                <img src="images/strilka.webp" alt="deletet">
-                <ul class="ulhederSubLiss">
-                    <li>
-                        <a href="#">Occasions</a>
-                    </li>
-                    <li>
-                        <a href="#">All Categories</a>
-                    </li>
-                    <li>
-                        <a href="#">Our Brands</a>
-                    </li>
-                    <li>
-                        <a href="#">About Us</a>
-                    </li>
-                </ul>
-            </li>
-
-            <li>
-                <a href="#">Our Brands</a>
-            </li>
-            <li>
-                <a href="#">About Us</a>
-            </li>
-            </ul>
-
         </naw>
         <div class="burgerMenu" id="burgerMenu">
             <span class="burgerMenuSpan"></span>
