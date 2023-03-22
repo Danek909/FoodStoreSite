@@ -1,34 +1,65 @@
-function ocasions() {
-  var menu = document.getElementById("menuOcasions");
-  if (menu.style.display === "none") {
-    menu.style.display = "block";
-  } else {
-    menu.style.display = "none";
+const menu = document.querySelector('.liUlcontainer');
+
+document.addEventListener("click", liUlcontainer);
+
+function liUlcontainer(event) {
+  if (event.target.closest('.ulHederButton')){
+    menu.classList.toggle('active');
+  }
+  if (!event.target.closest('.liUlcontainer')) {
+      menu.classList.remove('active');
   }
 }
 
-function categories() {
-  var menu = document.getElementById("menuCategories");
-  if (menu.style.display === "none") {
-    menu.style.display = "block";
-  } else {
-    menu.style.display = "none";
-  }
-}
+const closeopUp = document.getElementById("divX");
+const present = document.getElementById("divTop");
+closeopUp.addEventListener("click", function(){
+  present.style.display = "none";
 
-function Bundles() {
-  var menu = document.getElementById("menuBundles");
-  if (menu.style.display === "none") {
-    menu.style.display = "block";
-  } else {
-    menu.style.display = "none";
-  }
-}
-
-const heder = document.getElementById('buttonHeder');
-heder.addEventListener("click", () => {
-  heder.classList.toggle("present");
 });
+
+const scrolltop = document.getElementById("scrollTop");
+window.onscroll = () =>{
+  if(window.scrollY <500){
+    scrolltop.style.display = "none";
+    // document.querySelector('.isShowBtn');
+  }
+
+  else if(window.scrollY >500){
+    document.querySelector('.isShowBtn');
+    scrolltop.style.display = "block";
+  }
+};
+
+scrolltop.onclick = () =>{
+  window.scrollTo(0,0);
+  
+};
+
+
+
+
+const menu2 = document.querySelector('.liUlcontainer2');
+document.addEventListener("click", liUlcontainer2);
+function liUlcontainer2(event) {
+  if (event.target.closest('.ulHederButton2')){
+    menu2.classList.toggle('active');
+  }
+  if (!event.target.closest('.liUlcontainer2')) {
+      menu2.classList.remove('active');
+  }
+}
+
+const menu3 = document.querySelector('.liUlcontainer3');
+document.addEventListener("click", liUlcontainer3);
+function liUlcontainer3(event) {
+  if (event.target.closest('.ulHederButton3')){
+    menu3.classList.toggle('active');
+  }
+  if (!event.target.closest('.liUlcontainer3')) {
+      menu3.classList.remove('active');
+  }
+}
 
 const factory = document.getElementById('buttonHeder2');
 if (factory) {

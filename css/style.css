@@ -1,6 +1,24 @@
 body {
     margin: 0;
 }
+html{
+    scroll-behavior: smooth;
+}
+
+.isShowBtn img{
+    position: fixed;
+    z-index: 30;
+    width: 50px;
+    height: 50px;
+    bottom: 100px;
+    right: 15px;
+    background: #FF8126;
+    border-radius: 39px;
+}
+
+.isShowBtn{
+    display: none;
+}
 
 .divTop {
     background-color: #C2E8CE;
@@ -9,6 +27,7 @@ body {
     height: 50px;
     margin: 0 auto;
     position: relative;
+    z-index: 10;
 }
 
 .divTop.present {
@@ -27,6 +46,30 @@ body {
 .divTop.present .divX::before {
     transform: rotate(-134deg);
     transition: 0.5s;
+}
+
+.liUlcontainer .divUl {
+    display: none;
+}
+
+.liUlcontainer.active .divUl {
+    display: block;
+}
+
+.liUlcontainer2 .divUl2 {
+    display: none;
+}
+
+.liUlcontainer2.active .divUl2 {
+    display: block;
+}
+
+.liUlcontainer3 .divUl3 {
+    display: none;
+}
+
+.liUlcontainer3.active .divUl3 {
+    display: block;
 }
 
 .DivTopContainer {
@@ -76,6 +119,7 @@ body {
     position: absolute;
     transition: 0.2s;
     left: 106px;
+    top: 0px;
     width: 20px;
     height: 20px;
 }
@@ -92,10 +136,10 @@ body {
     background-color: #656565;
 }
 
-.ulHederButton.present .strilka {
+.liUlcontainer.active .strilka {
     transform: rotate(85deg);
     transition: 0.2s;
-    top: 0px;
+    top: -1px;
     left: 114px;
 }
 
@@ -114,10 +158,10 @@ body {
     position: absolute;
     transition: 0.2s;
     left: 133px;
+    top: 0px;
     width: 20px;
     height: 20px;
 }
-
 
 .strilka2::after {
     content: "";
@@ -130,17 +174,13 @@ body {
     background-color: #656565;
 }
 
-.ulHederButton.present .strilka2 {
+.liUlcontainer2.active .strilka2 {
     transform: rotate(85deg);
-    top: 0px;
-    left: 148px;
+    top: -1px;
+    left: 141px;
 }
 
-.strilka2._activee {
-    transform: rotate(87deg);
-    transition: 0.2s;
-    left: 138px;
-}
+
 
 .strilka3::before {
     content: "";
@@ -157,6 +197,7 @@ body {
     position: absolute;
     transition: 0.2s;
     left: 140px;
+    top: 0px;
     width: 20px;
     height: 20px;
 }
@@ -173,15 +214,9 @@ body {
     background-color: #656565;
 }
 
-.ulHederButton.present .strilka3 {
+.liUlcontainer3.active .strilka3 {
     transform: rotate(85deg);
-    top: 0px;
-    left: 148px;
-}
-
-.strilka3._activee {
-    transform: rotate(87deg);
-    transition: 0.2s;
+    top: -1px;
     left: 148px;
 }
 
@@ -264,6 +299,28 @@ body {
 }
 
 .ulHederButton {
+    border: 0;
+    background-color: #fff;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    color: #1F1F1F;
+}
+
+.ulHederButton2 {
+    border: 0;
+    background-color: #fff;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    color: #1F1F1F;
+}
+
+.ulHederButton3 {
     border: 0;
     background-color: #fff;
     font-family: "Poppins";
@@ -1206,6 +1263,10 @@ body {
     .section2_DivContainer {
         margin-bottom: 30px;
     }
+
+    .divSlider{
+        max-width: 720px;
+    }
 }
 
 
@@ -1225,6 +1286,7 @@ body {
 
     .ulHeder li {
         padding: 0px 17.5px;
+        margin-bottom: -1px;
     }
 
     .ulHeder li a {
@@ -1235,12 +1297,29 @@ body {
         font-size: 11px;
     }
 
+    .ulHederButton2 {
+        font-size: 11px;
+    }
+
+    .ulHederButton3 {
+        font-size: 11px;
+    }
+
     .divSection1 {
         margin-top: 50px;
     }
 }
 
 @media (max-width: 880px) {
+
+    .isShowBtn img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .burgerMenu .divTop .present {
+        top: 20px;
+    }
 
     .text_2Section1 {
         margin-bottom: 15px;
@@ -1250,27 +1329,34 @@ body {
         font-size: 20px;
     }
 
+    .ulHederButton2 {
+        font-size: 20px;
+    }
+
+    .ulHederButton3 {
+        font-size: 20px;
+    }
+
     .strilka {
         left: 136px;
     }
 
-    .ulHederButton.present .strilka {
-        left: 136px;
+    .liUlcontainer.active .strilka{
+        left: 134px;
     }
 
     .strilka2 {
         left: 164px;
     }
-
-    .strilka2._activee {
-        left: 172px;
+    .liUlcontainer2.active .strilka2{
+        left: 171px;
     }
 
     .strilka3 {
         left: 172px;
     }
 
-    .strilka3._activee {
+    .liUlcontainer3.active .strilka3{
         left: 178px;
     }
 
@@ -1316,8 +1402,8 @@ body {
         height: 32px;
         position: absolute;
         z-index: 10;
-        top: 92px;
         left: 16px;
+        transform: translate(0px, -72px);
     }
 
     .imgCarts2 {
@@ -1351,7 +1437,7 @@ body {
         background: #FF8126;
         position: absolute;
         right: 20px;
-        top: 92px;
+        transform: translate(0px, -72px);
     }
 
     .burgerMenu::before {
@@ -1406,14 +1492,27 @@ body {
     }
 
     .divCarts {
-        max-width: 100%;
+        max-width: 880px;
         justify-content: center;
     }
 
     .carts {
         display: flex;
         justify-content: center;
-        width: 0;
+        width: 100%;
+        height: 0px;
+        background: #fff;
+        position: relative;
+        z-index: 11;
+    }
+
+    .heder._activee .carts {
+        width: 100%;
+        height: 60px;
+        background: #fff;
+        position: relative;
+        z-index: 11;
+        top: -1px;
     }
 
     .heder._activee .ulHeder {
@@ -1430,7 +1529,7 @@ body {
     }
 
     .heder._activee .ulHeder li {
-        padding-bottom: 30px;
+        padding-bottom: 35px;
     }
 
     .heder._activee .ulHeder img {
@@ -1628,6 +1727,7 @@ body {
 @media(max-width: 500px) {
 
     .textDivTop {
+        width: 80%;
         font-size: 13px;
         margin-left: 16px;
         justify-content: flex-start;
